@@ -1,0 +1,23 @@
+//多行显示省略号
+@mixin no-wrap-line($line) {
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*! autoprefixer: off */
+	-webkit-box-orient: vertical;
+	/* autoprefixer: on */
+}
+//单行显示省略号
+@mixin no-wrap {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+@mixin public-father-css {
+	height: 100%;
+	padding: 0 15px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
